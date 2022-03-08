@@ -4418,12 +4418,12 @@ if ((args[0]) === 'on') {
 if (isNsfw) return reply('*nsfw is active !!*')
 _nsfw.push(from)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(_nsfw))
-reply(`\`\`\`Success ✅, Activando la función nsfw en el grupo\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Activating the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else if ((args[0]) === 'off') {
 if (!isNsfw) return reply('*nsfw is already off before !!*')
 _nsfw.splice(from, 1)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(_nsfw))
-reply(`\`\`\`Success ✅, Deshabilitar la función nsfw en el grupo\\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Disabling the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply('*on to enable, off to disable*')
 }
@@ -4437,12 +4437,12 @@ if ((args[0]) === 'on') {
 if (isWelkom) return reply('*welcome is active !!*')
 _welkom.push(from)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`Success ✅, Activando la función de bienvenida en el grupo\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Activating the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else if ((args[0]) === 'off') {
 if (!isWelkom) return reply('*welcome has been off before !!*')
 _welkom.splice(from, 1)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`Success ✅, Deshabilitar la función de bienvenida en el grupo\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Disabling the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply('*on to enable, off to disable*')
 }
@@ -4457,12 +4457,12 @@ if (args[0].toLowerCase() === 'on'){
 if (isAntiLink) return reply(`Already active`)
 _antilink.push(from)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`Success ✅, Activando la función antienlace en el grupo\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Activating the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else if (args[0].toLowerCase() === 'off'){
 let anuantilink = _antilink.indexOf(from)
 _antilink.splice(anuantilink, 1)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`Success ✅, Deshabilitar la función antienlace en el grupo\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Disabling the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply(`_Choose on or off_`)
 }
@@ -4477,12 +4477,12 @@ if (args[0].toLowerCase() === 'on'){
 if (isAntiVirtex) return reply(`Already active`)
 _antivirtex.push(from)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`Success ✅,Activando la función antivirtex en el grupo\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Activating the antivirtex feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else if (args[0].toLowerCase() === 'off'){
 let anuantivtex = _antivirtex.indexOf(from)
 _antivirtex.splice(anuantivtex, 1)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`Success ✅, Deshabilitar la función antivirus en el grupo\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Disabling the antivirus feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply(`_Choose on or off_`)
 }
@@ -4641,7 +4641,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateSubject(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Cambio el nombre del grupo a\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
+DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Renamed the group to\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
 break
 case 'setdesc':
 
@@ -4649,7 +4649,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateDescription(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Cambio la descripcion del grupo\`\`\` *${groupMetadata.subject}* Became: *${body.slice(9)}*`, text, { quoted: fgi })
+DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Changing group description\`\`\` *${groupMetadata.subject}* Became: *${body.slice(9)}*`, text, { quoted: fgi })
 break
 case 'setgrouppp':
 case 'setgruppp':
@@ -4937,7 +4937,6 @@ reply(`${err}`)
 	// console.log(e)
 	}
 }
-
 
 	
     
