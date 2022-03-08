@@ -1693,28 +1693,28 @@ her = `*Hero Details ${body.slice(12)}*
 *Comillas* : ${res.entrance_quotes}
 *Características de héroe* : ${res.hero_feature}
 *Especial* : ${res.speciality}
-*Recommended Lane* : ${res.laning_recommendation}
-*Price* : ${res.price.battle_point} [Battle point] | ${res.price.diamond} [DM] | ${res.price.hero_fragment} [Fragment]
-*Release* : ${res.release_date}
+*Carril recomendado* : ${res.laning_recommendation}
+*Precio* : ${res.price.battle_point} [Battle point] | ${res.price.diamond} [DM] | ${res.price.hero_fragment} [Fragment]
+*Lanzamiento* : ${res.release_date}
 
-*Durability* : ${res.skill.durability}
-*Offence* : ${res.skill.offense}
-*Skill Effect* : ${res.skill_effects}
-*Difficulty* : ${res.skill.difficulty}
+*Durabilidad* : ${res.skill.durability}
+*Delito* : ${res.skill.offense}
+*Efecto* : ${res.skill_effects}
+*Dificultad* : ${res.skill.difficulty}
  
-*Movement Speed* : ${res.attributes.movement_speed}
-*Physical Attack* : ${res.attributes.physical_attack}
-*Magic Defense* : ${res.attributes.magic_defense}
-*Ability Crit Rate* : ${res.attributes.ability_crit_rate}
+*Velocidad de movimiento* : ${res.attributes.movement_speed}
+*Ataque físico* : ${res.attributes.physical_attack}
+*Defensa Mágica* : ${res.attributes.magic_defense}
+*Tasa de crítico de habilidad* : ${res.attributes.ability_crit_rate}
 *HP* : ${res.attributes.hp}
 *Mana* : ${res.attributes.mana}
-*Mana Regen* : ${res.attributes.mana_regen}
+*Regeneración de mana* : ${res.attributes.mana_regen}
 
 *Story* : ${res.background_story}`
 reply(her)
 break
               case 'play':
-if (args.length ==0)return reply('Whats the title of the song?')
+if (args.length ==0)return reply('¿Cuál es el título de la canción?')
 bo = args.join(" ")
 reply(mess.wait)
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=KingOfBear`)
@@ -1732,7 +1732,7 @@ reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video🐶` })
+DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Aquí está tu video🐶` })
 break
 case 'mp3':
 reply(mess.wait)
@@ -1743,11 +1743,11 @@ DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: true, quo
 break
 case 'ytmp3':
 
-if (args.length < 1) return reply("Where is the link?")
+if (args.length < 1) return reply("¿Dónde está el enlace?")
 url = args.join(' ')
 anump3 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp3?url=${url}&apikey=${dhakey}`)
 ytmp3 = await getBuffer(anump3.result.url)
-reply(`_Audio is being processed, please wait a while longer_`)
+reply(`_El audio se está procesando, espere un poco más_`)
 DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
 break
 case 'ytmp4':
@@ -1781,7 +1781,7 @@ sendButVideo(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -1796,7 +1796,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -1833,7 +1833,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -1869,7 +1869,7 @@ sendButMessage(from, dhani, `Click To Go To Next ${command}`, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },]);
@@ -1882,7 +1882,7 @@ sendButMessage(from, dhani, `Click To Go To The Next Quotes`, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },]);
@@ -1895,7 +1895,7 @@ sendButMessage(from, dhani, `Click To Go To The Next Quotes`, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },]);
@@ -1958,7 +1958,7 @@ sendButImage(from, Cowok, `*_${tanggal} - ${time}_*`, cowo, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -1969,7 +1969,7 @@ sendButImage(from, Cewek, `*_${tanggal} - ${time}_*`, cewe, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -1985,7 +1985,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2009,7 +2009,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2040,7 +2040,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2058,7 +2058,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2147,7 +2147,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2187,9 +2187,9 @@ break
 //----> NSFW FEATURES <----//
 
 case 'hentaisearch': case 'nhentai':{
-	if (!isGroup) return reply('Bullshit! there is a child po*n\nIts better to just be in the group so that everyone will be sinned 😂')
+	if (!isGroup) return reply('¡Mierda! Hay un niño po*n\nEs mejor estar solo en el grupo para que todos sean pecadores 😂')
 if (!isNsfw) return reply(mess.only.nsfw)
-    if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
+    if (args.length == 0) return reply(`Ejemplo: ${prefix + command} 344253`)
     henid = args[0]
     get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=${lolkey}`)
     get_result = get_result.result
@@ -2229,7 +2229,7 @@ case 'pussy':
 case 'thighs':
 case 'yuri':
 
-if (!isGroup) return reply('Bullshit! there is a child po*n\nIts better to just be in the group so that everyone will be sinned 😂')
+if (!isGroup) return reply('¡Mierda! Hay un niño po*n\nEs mejor estar solo en el grupo para que todos sean pecadores 😂')
 if (!isNsfw) return reply(mess.only.nsfw)
 anu23 = await fetchJson(`https://apidhani.herokuapp.com/api/nsfw/${command}?apikey=${dhakey}`)
 buffer = await getBuffer(anu23.result)
@@ -2238,7 +2238,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2254,7 +2254,7 @@ sendButVideo(from, pll, `*Doge Bot*`, get_result, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2316,7 +2316,7 @@ if (!isNsfw) return reply(mess.only.nsfw)
                 case 'pussy_jpg':
                 case 'kemonomimi':
                 case 'nsfw_avatar':
-                if (!isGroup) return reply('Bullshit! there is a child po*n\nIts better to just be in the group so that everyone will be sinned 😂')
+                if (!isGroup) return reply('¡Mierda! Hay un niño po*n\nnEs mejor estar solo en el grupo para que todos sean pecadores 😂')
 if (!isNsfw) return reply(mess.only.nsfw)
                 reply(mess.wait)
                     getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${Lolhumanbykur}`).then((gambar) => {
@@ -2343,7 +2343,7 @@ sendButVideo(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `SIGUIENTE ➡️`,
 },
 type: 1,
 },
@@ -2483,12 +2483,12 @@ case '3ddeepseametal':
 case 'leddisplayscreen':
 case 'wonderfulgraffitiart':
 
-if (args.length < 1) return reply(`*Where is the text?*\n_Example : ${prefix + command} your name_`) 
+if (args.length < 1) return reply(`*Where is the text?*\n_Ejemplo : ${prefix + command} your name_`) 
 teks = args.join(" ")
 reply(mess.wait)
 anuapidhani = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/${command}?apikey=${dhakey}&text=${teks}`)
 oke = await getBuffer(anuapidhani.result)
-DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: 'Here u go!😛'})
+DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: '¡Aquí tienes! 😛'})
 break
 case 'hartatahta': 
 
@@ -2496,21 +2496,21 @@ if (args.length < 1) return reply(`*Wher is the text?*\n_Example : ${prefix + co
 teks = args.join(" ")
 reply(mess.wait)
 harta = await getBuffer(`https://apidhani.herokuapp.com/api/maker/harta-tahta?apikey=${dhakey}&text=${teks}`)
-DogeXeonOP.sendMessage(from, harta, image, {quoted: mek, caption: 'Here u go!😛'})
+DogeXeonOP.sendMessage(from, harta, image, {quoted: mek, caption: '¡Aquí tienes! 😛'})
 break
 
 //----> 2 TEXT <----//
 
 case '8bit':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(5)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anubit = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/8bit?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anubit.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'pornhub':
 
@@ -2521,243 +2521,243 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anuphub = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/pornhub?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuphub.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'glitch':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(7)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anuglitch = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/glitch?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuglitch.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'glitch2':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(8)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anug2 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/glitch2?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anug2.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'layered':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(8)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anulayered = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/layered?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anulayered.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case '3dsteel':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(8)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anu3dstl = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/3dsteel?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anu3dstl.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'realistic':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(10)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anurlstc = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/realistic?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anurlstc.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'lionlogo':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(9)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anullo = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/lionlogo?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anullo.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'ninjalogo':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(10)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anunlogo = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/ninjalogo?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anunlogo.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'wolf':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(5)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anuwolf = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/logowolf?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuwolf.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'wolf2':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(6)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anuw2 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/logowolf2?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuw2.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'halloween3':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(11)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anuh3 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/halloween3?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuh3.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'marvel':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(7)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anumvl = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/marvelstudio?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anumvl.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'marvel2':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(8)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anumvl2 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/marvelstudio2?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anumvl2.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'cinematichorror':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(16)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anucmcr = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/cinematichorror?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anucmcr.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'avengers':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(8)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anuavgr = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/avengerslogo?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuavgr.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'graffiti3':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(10)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anugrf3 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/coolwallgraffiti?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anugrf3.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'captainamerica':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(15)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 anucaptainca = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/captainamerica?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anucaptainca.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'girlneko':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(9)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko = await getBuffer(`https://apidhani.herokuapp.com/api/maker/girlneko?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'sadboy':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(7)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko2 = await getBuffer(`https://apidhani.herokuapp.com/api/maker/sadboy?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko2, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko2, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'makerkaneki':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(12)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko8383 = await getBuffer(`https://apidhani.herokuapp.com/api/maker/kaneki?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko8383, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko8383, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'rem':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(4)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko11111 = await getBuffer(`https://apidhani.herokuapp.com/api/maker/rem?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko11111, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko11111, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'lolimaker':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(9)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlnekojkjk = await getBuffer(`https://apidhani.herokuapp.com/api/maker/lolimaker?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlnekojkjk, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlnekojkjk, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
 case 'gura':
 
-if (args.length < 1) return reply(`*Example : ${prefix + command} name1&name2*`)
+if (args.length < 1) return reply(`*Ejemplo : ${prefix + command} name1&name2*`)
 var F = body.slice(5)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlnekoooo = await getBuffer(`https://apidhani.herokuapp.com/api/maker/gura?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlnekoooo, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlnekoooo, image, {caption: `¡Aquí tienes! 😛`, quoted: mek})
 break
                          case 'wolf3':
                          
@@ -2777,7 +2777,7 @@ break
                    break
        case 'logoa':
        
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Xeon&lol*`)
+                   if (args.length < 1) return reply(`[  ×  ] Ejemplo :\n*${prefix}${command} Xeon&lol*`)
                    var F = body.slice(7)
 				   var F1 = F.split("|")[0];
 				   var F2 = F.split("|")[1]; 
@@ -2787,7 +2787,7 @@ break
                    break
        case 'phlogo':  
        
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Xeon&lol*`)
+                   if (args.length < 1) return reply(`[  ×  ] Ejemplo :\n*${prefix}${command} Xeon&lol*`)
                    var F = body.slice(9)
 				   var F1 = F.split("|")[0];
 				   var F2 = F.split("|")[1]; 
@@ -2797,7 +2797,7 @@ break
                    break
        case 'marvel3':
        
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Xeon&lol*`)
+                   if (args.length < 1) return reply(`[  ×  ] Ejempo :\n*${prefix}${command} Xeon&lol*`)
                    var F = body.slice(8)
 				   var F1 = F.split("|")[0];
 				   var F2 = F.split("|")[1]; 
@@ -2806,21 +2806,21 @@ break
                    DogeXeonOP.sendMessage(from, anumrvl3, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'leavest':  
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Xeon*`)
+                   if (args.length < 1) return reply(`[  ×  ] Ejemplo :\n*${prefix}${command} Xeon*`)
                    F = body.slice(9)
                    reply(mess.wait)
                    anulvst = await getBuffer(`${ApiZeks}/api/leavest?text=${F}&apikey=${zeksApikey}`)
                    DogeXeonOP.sendMessage(from, anulvst, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break                   
        case 'notewrite':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Xeon*`)
+                   if (args.length < 1) return reply(`[  ×  ] Ejemplo :\n*${prefix}${command} Xeon*`)
                    F = body.slice(7)
                    reply(mess.wait)
                    anunw = await getBuffer(`${ApiZeks}/api/nulis?text=${F}&apikey=${zeksApikey}`)
                    DogeXeonOP.sendMessage(from, anunw, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'neon2':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} Xeon*`)
+                   if (args.length < 1) return reply(`[  ×  ] Ejemplo :\n*${prefix}${command} Xeon*`)
                    F = body.slice(7)
                    reply(mess.wait)
                    anunion2 = await getBuffer(`${ApiZeks}/api/bneon?apikey=${zeksApikey}&text=${F}`)
@@ -2843,7 +2843,7 @@ vcard2 = 'BEGIN:VCARD\n'
 DogeXeonOP.sendMessage(from, {displayName: `The owner ${botname}`, vcard: vcard2}, contact, 
 { quoted: fgi, 
 })
-reply(`_The above contact is my owner 🐶🦄_`)
+reply(`_El contacto anterior es mi dueño 🐶🦄_`)
 break
 case 'developer':
 
@@ -2880,7 +2880,7 @@ case 'runtime':
 textImg(`Bot Active Since ${runtime(process.uptime())}`)
 break
 case 'ping':
-case 'speed':
+case 'velocidad':
 
 timestampe = speed();
 latensie = speed() - timestampe
@@ -2896,15 +2896,15 @@ break
  //══════════[ SEARCH FEATURES ]══════════//
 
     case 'playstore':
-            if(!c) return reply('what are you looking for?')
+            if(!c) return reply(¿qué estás buscando?')
             let play = await hx.playstore(`${c}`)
             let store = '❉─────────────────────❉\n'
             for (let i of play){
             store += `\n*「 *PLAY lSTORE* 」*\n
-- *Name* : ${i.name}
+- *Nombre* : ${i.name}
 - *Link* : ${i.link}\n
-- *Dev* : ${i.developer}
-- *Dev Link* : ${i.link_dev}\n❉─────────────────────❉`
+- *Desarrollo* : ${i.developer}
+- *Enlace de desarrollado* : ${i.link_dev}\n❉─────────────────────❉`
             }
             reply(store)
             break
@@ -2915,7 +2915,7 @@ case 'ytsearch':
           res = await yts(`${teks}`)
           kant = ``
           for (let i of res.videos) {
-          kant += (`❒「  YtSearch  」\n• Title : ${i.title}\n• Views : ${i.views}\n• Uploaded On : ${i.ago}\n• Duration : ${i.timestamp}\n• Channel : ${i.author.name}\n• Video Link : ${i.url}\n\n\n`)
+          kant += (`❒「  YtSearch  」\n• Titulo : ${i.title}\n• Vistas : ${i.views}\n• Subido el : ${i.ago}\n• Duracion : ${i.timestamp}\n• Canal : ${i.author.name}\n• Enlace del video : ${i.url}\n\n\n`)
           }
           var akhir = kant.trim()
           sendFileFromUrl(res.all[0].image, image, {quoted: mek, caption: akhir})
@@ -2931,15 +2931,15 @@ break
 case 'google':
 case 'googlesearch':
 case 'ggs':
-if (args.length < 1) return reply('What are you looking for??')
+if (args.length < 1) return reply('¿Qué estás buscando?')
 teks = args.join(' ')
 reply(mess.wait)
 res = await ggs({'query' : `${teks}`})
 kant = ``
 for (let i of res) {
-kant += `*Title* : ${i.title}
+kant += `*Titulo* : ${i.title}
 *Link* : ${i.link}
-*Description* : ${i.snippet}`
+*Descripcion* : ${i.snippet}`
 }
 var akhir = kant.trim()
 reply(akhir)
@@ -2947,7 +2947,7 @@ break
 case 'gimage':
 case 'googleimage':
 case 'googleimg':
-if (args.length < 1) return reply('What do you want to search?')
+if (args.length < 1) return reply('¿Qué quieres buscar?')
 reply(mess.wait)
 teks = args.join(' ')
 res = await googleImage(teks, google)
@@ -2964,15 +2964,15 @@ break
  //══════════[ APK FEATURES ]══════════//
 
 case 'uapkpro':
-        if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+        if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Bgmi`)
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/uapkpro?apps=${query}&page=1&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Search for applications on the steamkpro.org platform and provide the result data 」\n\n'
+        ini_txt = '「  Busque aplicaciones en la plataforma steamkpro.org y proporcione los datos de resultado 」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Link :${x.apps_linkdl}\n`
-          ini_txt += `Tag : ${x.apps_tag}\n`
+          ini_txt += `Etiqueta : ${x.apps_tag}\n`
           ini_txt += `\n`
         }
         reply(ini_txt)
@@ -2982,69 +2982,69 @@ case 'uapkpro':
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/toraccino?apps=${query}&page=1&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Searching for Applications through the website and sending a data which is the result of the search! 」\n\n'
+        ini_txt = '「 ¡Buscando aplicaciones a través del sitio web y enviando datos que son el resultado de la búsqueda! 」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Link :${x.apps_linkdl}\n`
-          ini_txt += `Tag : ${x.apps_tag}\n`
-          ini_txt += `Upload : ${x.apps_upload}\n`
-          ini_txt += `Author : ${x.apps_author}\n`
+          ini_txt += `Etiqueta : ${x.apps_tag}\n`
+          ini_txt += `Subir : ${x.apps_upload}\n`
+          ini_txt += `Autor : ${x.apps_author}\n`
           ini_txt += `Desc : ${x.apps_desc}\n`
           ini_txt += `\n`
         }
         reply(ini_txt)
         break
       case 'revdl':
-        if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+        if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Bgmi`)
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/revdl?apps=${query}&page=1&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Searching for Applications through the website and sending a data which is the result of the search! 」\n\n'
+        ini_txt = '「 ¡Buscando aplicaciones a través del sitio web y enviando datos que son el resultado de la búsqueda! 」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Link :${x.apps_linkdl}\n`
           ini_txt += `\n`
         }
         reply(ini_txt)
         break
       case 'hostapk':
-        if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+        if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Bgmi`)
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/hostapk?apps=${query}&page=1&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Search for applications on the hostapk.com website and provide data from the search results 」\n\n'
+        ini_txt = '「  Busque aplicaciones en el sitio web hostapk.com y proporcione datos de los resultados de búsqueda 」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Link :${x.apps_linkdl}\n`
-          ini_txt += `Released : ${x.apps_released}\n`
-          ini_txt += `Author : ${x.apps_author}\n`
+          ini_txt += `Liberado : ${x.apps_released}\n`
+          ini_txt += `Autor : ${x.apps_author}\n`
           ini_txt += `Desc : ${x.apps_desc}\n`
           ini_txt += `\n`
         }
         reply(ini_txt)
         break
       case 'apkshub':
-        if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+        if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Bgmi`)
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/apkshub?apps=${query}&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Search for applications on the apkshub.com platform and provide the result data 」\n\n'
+        ini_txt = '「 Busque aplicaciones en la plataforma apkshub.com y proporcione los datos del resultado 」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Link :${x.apps_linkdl}\n`
-          ini_txt += `Views :${x.apps_views}\n`
+          ini_txt += `Vistas :${x.apps_views}\n`
           ini_txt += `\n`
         }
         reply(ini_txt)
         break
 case 'apkmody':
-        if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+        if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Bgmi`)
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/apkmody?apps=${query}&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Search for applications on the apkmody.io platform and provide the result data 」\n\n'
+        ini_txt = '「 Busque aplicaciones en la plataforma apkmody.io y proporcione los datos del resultado 」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Desc :${x.apps_desc}\n`
           ini_txt += `Link : ${x.apps_linkdl}\n`
           ini_txt += `\n`
@@ -3052,31 +3052,31 @@ case 'apkmody':
         reply(ini_txt)
         break
 case 'apkgoogle':
-        if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+        if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Bgmi`)
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/apkgoogle?apps=${query}&page=1&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Search for applications on the apkgoogle.org platform and provide the result data 」\n\n'
+        ini_txt = '「 Buscar aplicaciones en la plataforma apkgoogle.org y proporcionar los datos de resultado」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Link :${x.apps_linkdl}\n`
-          ini_txt += `Tag : ${x.apps_tag}\n`
+          ini_txt += `Etiqueta : ${x.apps_tag}\n`
           ini_txt += `\n`
         }
         reply(ini_txt)
         break
               case 'apkdone':
-        if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+        if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Bgmi`)
         query = args.join(' ')
         get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/apkdone?apps=${query}&apikey=cabd55849002ea851ce8`, { method: 'get' })
         kontol = get_result.result
-        ini_txt = '「 Search for applications on the apkdone.com website and provide data from the search results 」\n\n'
+        ini_txt = '「 Busque aplicaciones en el sitio web apkdone.com y proporcione datos de los resultados de búsqueda 」\n\n'
         for (var x of kontol) {
-          ini_txt += `Name : ${x.apps_name}\n`
+          ini_txt += `Nombre : ${x.apps_name}\n`
           ini_txt += `Link :${x.apps_linkdl}\n`
           ini_txt += `Version : ${x.apps_version}\n`
-          ini_txt += `Rate : ${x.apps_rate}\n`
-          ini_txt += `Tag : ${x.apps_tag}\n\n`
+          ini_txt += `Valorar : ${x.apps_rate}\n`
+          ini_txt += `Etiqueta : ${x.apps_tag}\n\n`
           ini_txt += `\n`
         }
         reply(ini_txt)
@@ -3164,16 +3164,16 @@ break
 //══════════[ OCR FEATURES ]══════════//
 
 case 'ninjaname':  
-if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Naruto*`)  
+if (args.length < 1) return reply(`[❗] Ejemplo :\n*${prefix}${command} Naruto*`)  
 F = body.slice(11)
 anunname = await fetchJson(`https://docs-jojo.herokuapp.com/api/ninja_name?name=${F}`)
-anu1 = `🐶 *NAME* : ${anunname.your_name}\n`
+anu1 = `🐶 *NOMBRE* : ${anunname.your_name}\n`
 anu1 += `🐶 *NINJA* : ${anu.result}\n`
 reply(anu1)
 break
 case 'stylishcoolname':
 anuscn = await fetchJson(`https://leyscoders-api.herokuapp.com/api/nick-epep?apikey=${Leyscoders}`)
-reply(`*🐶HERE IS YOUR RANDOM STYLISH NAME🐶*\n\n${anuscn.result}`)
+reply(`*🐶AQUÍ ESTÁ TU NOMBRE CON ESTILO ALEATORIO🐶*\n\n${anuscn.result}`)
 break
 case 'ssweb':
 case 'ss':
@@ -4418,12 +4418,12 @@ if ((args[0]) === 'on') {
 if (isNsfw) return reply('*nsfw is active !!*')
 _nsfw.push(from)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(_nsfw))
-reply(`\`\`\`Success ✅, Activating the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Activando la función nsfw en el grupo\`\`\` *${groupMetadata.subject}*`)
 } else if ((args[0]) === 'off') {
 if (!isNsfw) return reply('*nsfw is already off before !!*')
 _nsfw.splice(from, 1)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(_nsfw))
-reply(`\`\`\`Success ✅, Disabling the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Deshabilitar la función nsfw en el grupo\\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply('*on to enable, off to disable*')
 }
@@ -4437,12 +4437,12 @@ if ((args[0]) === 'on') {
 if (isWelkom) return reply('*welcome is active !!*')
 _welkom.push(from)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`Success ✅, Activating the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Activando la función de bienvenida en el grupo\`\`\` *${groupMetadata.subject}*`)
 } else if ((args[0]) === 'off') {
 if (!isWelkom) return reply('*welcome has been off before !!*')
 _welkom.splice(from, 1)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`Success ✅, Disabling the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Deshabilitar la función de bienvenida en el grupo\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply('*on to enable, off to disable*')
 }
@@ -4457,12 +4457,12 @@ if (args[0].toLowerCase() === 'on'){
 if (isAntiLink) return reply(`Already active`)
 _antilink.push(from)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`Success ✅, Activating the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Activando la función antienlace en el grupo\`\`\` *${groupMetadata.subject}*`)
 } else if (args[0].toLowerCase() === 'off'){
 let anuantilink = _antilink.indexOf(from)
 _antilink.splice(anuantilink, 1)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`Success ✅, Disabling the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Deshabilitar la función antienlace en el grupo\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply(`_Choose on or off_`)
 }
@@ -4477,12 +4477,12 @@ if (args[0].toLowerCase() === 'on'){
 if (isAntiVirtex) return reply(`Already active`)
 _antivirtex.push(from)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`Success ✅, Activating the antivirtex feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅,Activando la función antivirtex en el grupo\`\`\` *${groupMetadata.subject}*`)
 } else if (args[0].toLowerCase() === 'off'){
 let anuantivtex = _antivirtex.indexOf(from)
 _antivirtex.splice(anuantivtex, 1)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`Success ✅, Disabling the antivirus feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`Success ✅, Deshabilitar la función antivirus en el grupo\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply(`_Choose on or off_`)
 }
@@ -4641,7 +4641,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateSubject(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Renamed the group to\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
+DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Cambio el nombre del grupo a\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
 break
 case 'setdesc':
 
@@ -4649,7 +4649,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateDescription(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Changing group description\`\`\` *${groupMetadata.subject}* Became: *${body.slice(9)}*`, text, { quoted: fgi })
+DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Cambio la descripcion del grupo\`\`\` *${groupMetadata.subject}* Became: *${body.slice(9)}*`, text, { quoted: fgi })
 break
 case 'setgrouppp':
 case 'setgruppp':
