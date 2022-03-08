@@ -2896,7 +2896,7 @@ break
  //══════════[ SEARCH FEATURES ]══════════//
 
     case 'playstore':
-            if(!c) return reply(what are you looking for?')
+            if(!c) return reply('what are you looking for?')
             let play = await hx.playstore(`${c}`)
             let store = '❉─────────────────────❉\n'
             for (let i of play){
