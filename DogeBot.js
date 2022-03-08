@@ -535,7 +535,7 @@ if (!isGroup) return
 if (!isAntiLink) return
 if (isGroupAdmins) return
 var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-reply(` *「 GROUP LINK DETECTED 」*\nYou sent the group chat link, sorry you will be kicked from the group`)
+reply(` *「 GROUP LINK DETECTED 」*\nEnviaste el enlace de chat grupal, lo siento, serás expulsado del grupo`)
 setTimeout(() => {
 DogeXeonOP.groupRemove(from, [kic]).catch((e) => { reply(`BOTS MUST BE ADMIN`) })
 }, 0)
@@ -546,7 +546,7 @@ if (!isGroup) return
 if (!isAntiVirtex) return
 if (isGroupAdmins) return
 reply('Mark as read\n'.repeat(300))
-reply(`「 *VIRUS DETECTED* 」\n\nEnviaste el enlace de chat grupal, lo siento, serás expulsado del grupo`)
+reply(`「 *VIRUS DETECTED* 」\n\nEnviaste un virtex, lo siento, serás expulsado del grupo`)
 console.log(color('[KICK]', 'red'), color('Received a text virus!', 'yellow'))
 DogeXeonOP.groupRemove(from, [sender])
 }     
@@ -591,28 +591,28 @@ ${gaya1} *Date* : ${tanggal}
 ${gaya1} *Time* : ${time}
 
 ❏「 INFO BOT 」
-${gaya1} *Speed* : ${latensie.toFixed(4)} Second
-${gaya1} *Runtime* : ${runtime(process.uptime())}
-${gaya1} *Bot Name* : ${botname}
-${gaya1} *Owner Name* : ${ownername}
-${gaya1} *Owner Number* : @${pemilik.split('@')[0]}
-${gaya1} *Host Name :* ${os.hostname()}
-${gaya1} *Platform :* ${os.platform()}
-${gaya1} *Wa Version :* ${DogeXeonOP.user.phone.wa_version}
-${gaya1} *Mode :* ${self ? "Self" : "Public"}
+${gaya1} *Velocidad* : ${latensie.toFixed(4)} Second
+${gaya1} *Tienpo de ejecucion* : ${runtime(process.uptime())}
+${gaya1} *Nonbre del bot* : ${botname}
+${gaya1} *Nombre del propietario* : ${ownername}
+${gaya1} *Numero del propietario* : @${pemilik.split('@')[0]}
+${gaya1} *Nombre de host :* ${os.hostname()}
+${gaya1} *Plataforma :* ${os.platform()}
+${gaya1} *Versión Wa :* ${DogeXeonOP.user.phone.wa_version}
+${gaya1} *Modo :* ${self ? "Self" : "Public"}
 ${gaya1} *Autoread* : ${autoread ? "Active" : "Off"}
 ${gaya1} *Autotype* : ${autoketik ? "Active" : "Off"}
 ${gaya1} *Autovn* : ${autovn ? "Active" : "Off"}
 
 ❏「 USER INFO 」
-${gaya1} *Name* : ${pushname}
+${gaya1} *Nombre* : ${pushname}
 ${gaya1} *Bio* : ${bio_user}
-${gaya1} *Number* : @${senderr.split('@')[0]}
-${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
+${gaya1} *Numero* : @${senderr.split('@')[0]}
+${gaya1} *Estado* : ${isOwner ? 'Owner' : 'User'}`
 teks =
-`_Please Select Button Below_
-_If You Are A Mod User_
-_Please Type ${prefix}command_`
+`_Por favor, seleccione el botón de abajo_
+_Si eres usuario de mods_
+_Escriba ${prefix}comando_`
 DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
@@ -733,7 +733,7 @@ DogeXeonOP.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { m
 break
 case 'allmenu':
 
-reply(`*_Sorry Features ${prefix + command} Not Available Please Type ${prefix}command_*`)
+reply(`*_Lo siento Características ${prefix + command} No disponible Por favor escriba ${prefix}comando_*`)
 break
 case 'grupmenu':
 case 'groupmenu':
@@ -1495,7 +1495,7 @@ give credit too / add in at tqtq
 --> Xeon*/
 
       case 'mediafire':
-        if (args.length < 1) return reply('Where is the link? ')
+        if (args.length < 1) return reply('¿Dónde está el enlace? ')
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         reply(mess.wait)
         teks = args.join(' ')
@@ -1532,7 +1532,7 @@ Please Choose Whether Document, Audio or Video Below`
         ]);
         break;
               case 'fire':
-        if (args.length < 1) return reply('Where is the link? ')
+        if (args.length < 1) return reply('¿Dónde está el enlace? ')
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         teks = args.join(' ')
         res = await mediafireDl(teks)
@@ -1554,13 +1554,13 @@ Please Choose Whether Document, Audio or Video Below`
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         teks = args.join(' ')
         res = await mediafireDl(teks)
-        result = `Media Fire Downloader
-  Wait for the Process of Sending Media......`
+        result = `Descargador de Media Fire
+  Espere el proceso de envío de medios ......`
         reply(result)
         sendFileFromUrl(res[0].link, audio, { quoted: mek, mimetype: 'video/mp3', filename: res[0].output })
         break
 case 'spotify':{
-    if (args.length == 0) return reply(`Example: ${prefix + command} https://open.spotify.com/track/0ZEYRVISCaqz5yamWZWzaA`)
+    if (args.length == 0) return reply(`Ejemplo: ${prefix + command} https://open.spotify.com/track/0ZEYRVISCaqz5yamWZWzaA`)
     url = args[0]
     get_result = await fetchJson(`https://api.lolhuman.xyz/api/spotify?apikey=${lolkey}&url=${url}`)
     get_result = get_result.result
@@ -1576,11 +1576,11 @@ case 'spotify':{
     }
     break
    case 'soundcloud':
-                if(!q)return reply(`Example : ${prefix + command} sound cloud link`)
-                if (!q.includes('m.soundcloud.com')) return reply('Thats not a SoundCloud link')
+                if(!q)return reply(`Example : ${prefix + command} enlace de nube de sonido`)
+                if (!q.includes('m.soundcloud.com')) return reply('Ese no es un enlace de SoundCloud')
                 await reply(lang.wait())
 				zee.SoundCloud(`${q}`).then(async (data) => {
-                    let txt = `*----「 SOUNDCLOUD DOWNLOAD 」----*\n\n`
+                    let txt = `*----「 DESCARGA DE SOUNDCLOUD 」----*\n\n`
                     txt += `*• Title :* ${data.title}\n`
                     txt += `*• Duration :* ${data.duration}\n`
 					txt += `*• Quality :* ${data.medias[1].quality}\n`
@@ -1593,8 +1593,8 @@ case 'spotify':{
 				})
 			break
 	case 'telesticker': case 'telegramsticker': case 'tstiker': {
-			if (!q) return reply(`Example: ${prefix + command} *https://t.me/addstickers/geestickerpack*`)
-			if (!q.includes('t.me')) return reply('This is not a telegram sticker link')
+			if (!q) return reply(`Ejemplo: ${prefix + command} *https://t.me/addstickers/geestickerpack*`)
+			if (!q.includes('t.me')) return reply('Este no es un enlace de pegatina de Telegram')
 			var telestc = await zee.Telesticker(`${q}`)
 			await reply(mess.wait)
 			for (let i = 0; i < (telestc.length < 10 ? telestc.length : 10); i++) {
@@ -1604,8 +1604,8 @@ case 'spotify':{
 		break
 case 'tiktoknowm':
    case 'tiktok':
-			if (!q) return reply('The link?')
-			if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid link')
+			if (!q) return reply('¿El enlace?')
+			if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Enlace no válido')
 			reply(mess.wait)
 			let nowem = q
 			zee.Ttdownloader(nowem)
@@ -1617,11 +1617,11 @@ case 'tiktoknowm':
 					noweem = await getBuffer(nowm)
 					DogeXeonOP.sendMessage(from,noweem , MessageType.video, {mimetype: 'video/mp4',quoted: mek})
 					})
-				}).catch((err) => reply(`Invalid link`))
+				}).catch((err) => reply(`Enlace no válido`))
 			
              break 
 case 'tiktokwm':
-			if (!q) return reply('The link?')
+			if (!q) return reply('¿El enlace?')
 			if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid link')
 			reply(mess.wait)
 			let wem = args.join(' ')
@@ -1634,14 +1634,14 @@ case 'tiktokwm':
 					weem = await getBuffer(wm)
 					DogeXeonOP.sendMessage(from,weem , MessageType.video, {mimetype: 'video/mp4',quoted: mek})
 					})
-				}).catch((err) => reply(`Invalid link`))
+				}).catch((err) => reply(`Enlace no válido`))
 			
              break 
 case 'tiktokmusic':
  case 'tiktokaudio':  
  case 'tiktokmp3':
-			if (!q) return reply('The link?')
-			if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid Link')
+			if (!q) return reply('¿El enlace?')
+			if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Enlace no válido')
 			reply(mess.wait)
 			let audi = q
 			zee.Ttdownloader(audi)
@@ -1652,13 +1652,13 @@ case 'tiktokmusic':
 					audnha = await getBuffer(audio)
 					DogeXeonOP.sendMessage(from,audnha , MessageType.document, {mimetype: 'audio/mp4',filename: `Tiktok Music.mp3`,quoted: mek})
 					})
-				}).catch((err) => reply(`Invalid link`))
+				}).catch((err) => reply(`Enlace no válido`))
 			
              break
 case 'ig':
 case 'igdl':
 case 'instagram':
-if (!c) return reply('The link?')
+if (!c) return reply('¿El enlace?')
 var { igDownloader } = require('./lib/igdown')
    res = await igDownloader(`${c}`).catch(e => {
 reply(mess.error.api)
@@ -1668,7 +1668,7 @@ sendMediaURL(from,`${res.result.link}`,`${res.result.desc}`)
                     break
 case 'lyrics':
 reply(mess.wait)
-if (args.length < 1) return reply('What is the name of the song?')
+if (args.length < 1) return reply('¿Cuál es el nombre de la canción?')
 teks = body.slice(7)
 lirikLagu(teks).then((res) => {
 let lirik = `${res[0].result}`
@@ -1688,11 +1688,11 @@ case 'herodetail':
 res = await herodetails(body.slice(12))
 her = `*Hero Details ${body.slice(12)}*
 
-*Name* : ${res.hero_name}
-*Role* : ${res.role}
-*Quotes* : ${res.entrance_quotes}
-*Hero Features* : ${res.hero_feature}
-*Special* : ${res.speciality}
+*Nombre* : ${res.hero_name}
+*Rol* : ${res.role}
+*Comillas* : ${res.entrance_quotes}
+*Características de héroe* : ${res.hero_feature}
+*Especial* : ${res.speciality}
 *Recommended Lane* : ${res.laning_recommendation}
 *Price* : ${res.price.battle_point} [Battle point] | ${res.price.diamond} [DM] | ${res.price.hero_fragment} [Fragment]
 *Release* : ${res.release_date}
