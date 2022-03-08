@@ -116,22 +116,22 @@ const imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
 
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
         if(time2 < "23:59:00"){
-        var ucapanWaktu = 'Good night 🌌'
+        var ucapanWaktu = 'Buenas noches 🌌'
 }
         if(time2 < "19:00:00"){
-        var ucapanWaktu = 'Good afternoon 🌆'
+        var ucapanWaktu = 'Buenas tardes 🌆'
 }
         if(time2 < "18:00:00"){
-        var ucapanWaktu = 'Good afternoon 🌇'
+        var ucapanWaktu = 'Buenas tardes 🌇'
 }
         if(time2 < "15:00:00"){
-        var ucapanWaktu = 'Good afternoon 🏞'
+        var ucapanWaktu = 'Buenas tardes  🏞'
 }
         if(time2 < "11:00:00"){
-        var ucapanWaktu = 'Good morning 🌅'
+        var ucapanWaktu = 'Buenas dias 🌅'
 }
         if(time2 < "05:00:00"){
-        var ucapanWaktu = 'Good night 🏙'
+        var ucapanWaktu = 'Buenas noches 🏙'
 }
 
 //══════════[ Module Export ]══════════//
@@ -511,9 +511,9 @@ for (let anji of setik){
                 addLevelingLevel(sender, 1)   
                 var lvlup = (`╭───「 *🥳ʟᴇᴠᴇʟ ᴜᴘ🥳* 」
 │
-├ 💜 𝗡𝗮𝗺𝗲 : ${pushname}
-├ 📱 𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split('@')[0]}
-├ 🏅 𝗥𝗮𝗻𝗸 : ${role}
+├ 💜 *Nombre* : ${pushname}
+├ 📱 *Numero* : ${sender.split('@')[0]}
+├ 🏅 *Rankin* : ${role}
 ├ 🔖 𝗫𝗣 : ${getLevelingXp(sender)}
 ├ 💠 𝗟𝗲𝘃𝗲𝗹  : ${getLevelingLevel(sender)}
 │
@@ -546,7 +546,7 @@ if (!isGroup) return
 if (!isAntiVirtex) return
 if (isGroupAdmins) return
 reply('Mark as read\n'.repeat(300))
-reply(`「 *VIRUS DETECTED* 」\n\nYou sent a virtex, sorry you will be kicked from the group`)
+reply(`「 *VIRUS DETECTED* 」\n\nEnviaste el enlace de chat grupal, lo siento, serás expulsado del grupo`)
 console.log(color('[KICK]', 'red'), color('Received a text virus!', 'yellow'))
 DogeXeonOP.groupRemove(from, [sender])
 }     
@@ -626,103 +626,103 @@ sections: [
 "title": `${tanggal} - ${time}`,
 rows: [
 {
-"title": "GROUP MENU",
-"description": `Display A List Of Group Features`,
+"title": "👨‍🔧MENU DE GRUPO",
+"description": `Mostrar una lista de funciones del grupo`,
 "rowId": `${prefix}grupmenu`
 },
 {
-"title": "DOWNLOAD MENU",
-"description": `Display A List Of Features To Download`,
+"title": "🎥MENÚ DE DESCARGA",
+"description": `Mostrar una lista de funciones para descargar`,
 "rowId": `${prefix}downloadmenu`
 },
 {
-"title": "MAKER MENU",
-"description": `Display A List Of Features To Create Logo`,
+"title": "🖼MENÚ FABRICANTE",
+"description": `Mostrar una lista de funciones para crear un logotipo`,
 "rowId": `${prefix}makermenu`
 },
 {
-"title": "GAME MENU",
-"description": `Display A List Of Game Features`,
+"title": "🎮MENÚ DEL JUEGO",
+"description": `Mostrar una lista de características del juego`,
 "rowId": `${prefix}gamemenu`
 },
 {
-"title": "RANDOM IMAGE MENU",
-"description": `Display A List Of Random Photo Features`,
+"title": "🎞MENÚ DE IMAGEN ALEATORIA",
+"description": `Mostrar una lista de funciones de fotos aleatorias`,
 "rowId": `${prefix}randomimage`
 },
 {
-"title": "RANDOM VIDEO",
-"description": `Display A List Of Random Video Features`,
+"title": "🖥VÍDEO ALEATORIO",
+"description": `Mostrar una lista de funciones de video aleatorias`,
 "rowId": `${prefix}randomvideo`
 },
 {
-"title": "AESTHETIC GIRL MENU",
-"description": `Display A List Of 18+ Intake Features`,
+"title": "👩MENÚ ESTÉTICO CHICA",
+"description": `Mostrar una lista de más de 18 funciones de admisión`,
 "rowId": `${prefix}asupanmenu`
 },
 {
-"title": "RANDOM GIRL MENU",
-"description": `Display A List Of Random Girl Features`,
+"title": "👧MENÚ ALEATORIO PARA NIÑAS",
+"description": `Mostrar una lista de características aleatorias de chicas`,
 "rowId": `${prefix}cecanmenu`
 },
 {
-"title": "ANIME MENU",
+"title": "👸MENÚ ANIME",
 "description": `Display A List Of Anime Features`,
 "rowId": `${prefix}animemenu`
 },
 {
-"title": "NSFW/HENTAI MENU",
-"description": `Display A List Of Nsfw 18+ Features`,
+"title": "🔞MENÚ NSFW/HENTAI",
+"description": `Mostrar una lista de características de Nsfw 18+`,
 "rowId": `${prefix}nsfwmenu`
 },
 {
-"title": "STICKER MENU",
-"description": `Display A List Of Sticker Features`,
+"title": "🚗MENU DE STICKER ",
+"description": `Mostrar una lista de características de sticker`,
 "rowId": `${prefix}stickermenu`
 },
 {
-"title": "FUN MENU",
-"description": `Display A List Of Fun Features`,
+"title": "😀MENÚ DIVERTIDO",
+"description": `Mostrar una lista de funciones divertidas`,
 "rowId": `${prefix}funmenu`
 },
 {
-"title": "SOUND MENU",
-"description": `Display A List Of Sounds`,
+"title": "📡MENÚ DE SONIDO",
+"description": `Mostrar una lista de sonidos`,
 "rowId": `${prefix}soundmenu`
 },
 {
-"title": "OCR MENU",
-"description": `Display A List Of Ocr Features`,
+"title": "📃MENÚ OCR",
+"description": `Mostrar una lista de características Ocr`,
 "rowId": `${prefix}ocrmenu`
 },
 {
-"title": "CONVERTER MENU",
-"description": `Display A List Of Convert Features`,
+"title": "🛠MENÚ CONVERTIDOR",
+"description": `Mostrar una lista de funciones de conversión`,
 "rowId": `${prefix}convertmenu`
 },
 {
-"title": "LEVELING MENU",
-"description": `Display A List Of Leveling Features`,
+"title": "🥇MENÚ DE NIVELACIÓN",
+"description": `Mostrar una lista de características de nivelación`,
 "rowId": `${prefix}levelingmenu`
 },
 {
-"title": "SEARCH MENU",
+"title": "🔎MENÚ DE BÚSQUEDA",
 "description": `Display A List Of Searching Features`,
 "rowId": `${prefix}searchmenu`
 },
 {
-"title": "APK MENU",
-"description": `Display A List Of Apk Features`,
+"title": "📱MENÚ APK",
+"description": `Mostrar una lista de características de Apk`,
 "rowId": `${prefix}apkmenu`
 },
 {
-"title": "OTHER MENU",
-"description": `Display A List Of Other Features`,
+"title": "🐶OTRO MENÚ",
+"description": `Mostrar una lista de otras funciones`,
 "rowId": `${prefix}othermenu`
 },
 {
-"title": "OWNER MENU",
-"description": `Display A List Of Owner Features`,
+"title": "🤵MENÚ DE PROPIETARIO",
+"description": `Mostrar una lista de características del propietario`,
 "rowId": `${prefix}ownermenu`
 }
 ]
@@ -1449,7 +1449,7 @@ DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}
 break
 case 'abcde':
 
-reply('damn gay, really gay, wow, no one wants to play with him bro, its unclean because he is gay 🗿')
+reply('maldito gay, realmente gay, wow, nadie quiere jugar con él hermano, es sucio porque es gay 🗿')
 break
 
 //══════════[ RENT DLL ]══════════//
