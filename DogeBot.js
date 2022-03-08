@@ -271,19 +271,19 @@ console.log(e)
 //══════════[ Mess Dll ]══════════//
 
 mess = {
-wait: 'In process...',
-eror: 'Sorry an error occurred!!',
-success: 'Done✓',
+wait: 'En proceso...',
+eror: '¡Lo siento, se produjo un error!',
+success: 'Hecho✓',
 error: {
-stick: 'Thats not a sticker bro !!',
-Iv: 'Link invalid !!'
+stick: '¡Eso no es una pegatina, hermano!',
+Iv: '¡Enlace inválido!'
 },
 only: {
-nsfw: 'The nsfw feature has not been activated, please contact the admin to activate',
-group: 'This feature is only for group!!',
-owner: 'This feature is only for owner!!',
-admin: 'This feature is onlu for admin!!',
-Badmin: 'Please give adminship to the bot first!!'
+nsfw: 'La función nsfw no se ha activado, comuníquese con el administrador para activarla',
+group: '¡¡Esta característica es solo para grupos!!',
+owner: '¡Esta característica es solo para el propietario!',
+admin: '¡Esta función es solo para administradores!',
+Badmin: '¡Por favor, dale la administración al bot primero!'
 }
 }
 
