@@ -114,7 +114,7 @@ const imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
 
 //══════════[ TIME ]══════════//
 
-const time2 = moment().tz('America/Los_Angeles').format('HH:mm:ss')
+const time2 = moment().tz('America/New_York').format('HH:mm:ss')
         if(time2 < "23:59:00"){
         var ucapanWaktu = 'Buenas noches 🌌'
 }
@@ -147,10 +147,10 @@ module.exports = DogeXeonOP = async (DogeXeonOP, mek, _welkom) => {
         const content = JSON.stringify(mek.message)
 		const from = mek.key.remoteJid
 		const { text, extendedText, contact, contactsArray, groupInviteMessage, listMessage, buttonsMessage, location, liveLocation, image, video, sticker, document, audio, product, quotedMsg } = MessageType
-		const tanggal = moment.tz('America/Los_Angeles').format('dddd') + ', ' + moment.tz('America/Los_Angeles').format('LL')
-		const time = moment().tz('America/Los_Angeles').format("HH:mm:ss")
-		const timeMak = moment().tz('America/Los_Angeles').format("HH:mm:ss");
-        const timeJay = moment().tz('America/Los_Angeles').format("HH:mm:ss");
+		const tanggal = moment.tz('America/New_York').format('dddd') + ', ' + moment.tz('America/New_York').format('LL')
+		const time = moment().tz('America/New_York').format("HH:mm:ss")
+		const timeMak = moment().tz('America/New_York').format("HH:mm:ss");
+        const timeJay = moment().tz('America/New_York').format("HH:mm:ss");
         const type = Object.keys(mek.message)[0]        
         const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
         const prefix = /^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*@,;]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*,;]/gi) : '#'          	
