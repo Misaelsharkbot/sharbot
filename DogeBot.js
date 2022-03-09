@@ -114,7 +114,7 @@ const imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
 
 //══════════[ TIME ]══════════//
 
-const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
+const time2 = moment().tz('Lima/Perú').format('HH:mm:ss')
         if(time2 < "23:59:00"){
         var ucapanWaktu = 'Buenas noches 🌌'
 }
