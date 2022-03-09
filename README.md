@@ -57,7 +57,7 @@ heroku/nodejs
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-🦄 git clone https://github.com/DGXeon/DogeBot.git
+🦄 git clone https://github.com/Misaelsharkbot/sharbot.git
 🦄 cd DogeBot3
 🦄 npm start
 ```
