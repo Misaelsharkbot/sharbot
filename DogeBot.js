@@ -477,17 +477,17 @@ for (let anji of setik){
 //══════════[ Rank Function ]══════════//
 
 			const levelRole = getLevelingLevel(sender)
-   	        	     var role = 'bronz'
+   	        	     var role = 'bronce'
    	     if (levelRole <= 3) {
-   	         role = 'Copper'
+   	         role = 'Cobre'
    	     } else if (levelRole <= 5) {
-   	         role = 'Iron'
+   	         role = 'Hierro'
    	     } else if (levelRole <= 7) {
-   	         role = 'Silver'
+   	         role = 'Plata'
    	     } else if (levelRole <= 10) {
-   	         role = 'Gold'
+   	         role = 'Oro'
    	     } else if (levelRole <= 12) {
-   	         role = 'Platinum'
+   	         role = 'Platino'
    	     } else if (levelRole <= 15) {
    	         role = 'Mithril'
    	     } else if (levelRole <= 18) {
@@ -587,8 +587,8 @@ menu =
 `*_${ucapanWaktu} @${senderr.split('@')[0]}_*
 
 ❏「 TIME 」
-${gaya1} *Date* : ${tanggal}
-${gaya1} *Time* : ${time}
+${gaya1} *Fecha* : ${tanggal}
+${gaya1} *Tiempo* : ${time}
 
 ❏「 INFO BOT 」
 ${gaya1} *Velocidad* : ${latensie.toFixed(4)} Second
@@ -620,7 +620,7 @@ case 'command':
 listMsg = {
 buttonText: 'MENU 📃',
 footerText: `*${botname}*`,
-description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here`,
+description: `Hola amigo @${senderr.split('@')[0]}, seleccione el menú aquí`,
 sections: [
 {
 "title": `${tanggal} - ${time}`,
